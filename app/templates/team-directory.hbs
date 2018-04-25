@@ -31,20 +31,16 @@
 
 </div>
 
-
-
-
 <div class="tile_detail">
-
 
   <div>
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#active" style="font-size: 16px;font-weight: 600;" aria-controls="home" role="tab" data-toggle="tab">Active (29)</a></li>
-      <li role="presentation"><a href="#pending" aria-controls="profile"  style="font-size: 16px;font-weight: 600;" role="tab" data-toggle="tab">Pending (17)</a></li>
-      <li role="presentation"><a href="#deactivated" aria-controls="messages" role="tab"  style="font-size: 16px;font-weight: 600;" data-toggle="tab">Deactivated (3)</a></li>
-      <li role="presentation"><a href="#administrator" aria-controls="settings" role="tab"  style="font-size: 16px;font-weight: 600;" data-toggle="tab">Administrators (14)</a></li>
+      <li role="presentation" class="active"><a href="#active" style="font-size: 16px;font-weight: 600;" aria-controls="home" role="tab" data-toggle="tab">Active</a></li>
+      <li role="presentation"><a href="#pending" aria-controls="profile"  style="font-size: 16px;font-weight: 600;" role="tab" data-toggle="tab">Pending</a></li>
+      <li role="presentation"><a href="#deactivated" aria-controls="messages" role="tab"  style="font-size: 16px;font-weight: 600;" data-toggle="tab">Deactivated</a></li>
+      <li role="presentation"><a href="#administrator" aria-controls="settings" role="tab"  style="font-size: 16px;font-weight: 600;" data-toggle="tab">Administrators</a></li>
     </ul>
 
     <!-- Tab panes -->
@@ -55,20 +51,24 @@
             <div class="table-responsive">
 
                   {{#each model status="active" as |activeUserList|}}
+                    {{#if activeUserList.active}}
 <div class="row user-list">
-<<div class="col-md-4">
-  {{activeUserList.name}} {{index}}
+
+<<div class="col-md-3">
+  {{activeUserList.name}}
 </div>
 <<div class="col-md-4">
   {{activeUserList.email}}
 </div>
 <<div class="col-md-3">
-  {{activeUserList.contactDetails}}
+  {{activeUserList.phone}}
 </div>
-<<div class="col-md-1">
+<<div class="col-md-2">
   <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 </div>
+
 </div>
+{{/if}}
                   {{/each}}
             </div>
         </div>
@@ -79,21 +79,23 @@
         <div class="card-content">
           <div class="table-responsive">
 
-                {{#each model status="pending" as |pendingUserList|}}
+                {{#each model as |pendingUserList|}}
+                {{#if  pendingUserList.pending}}
 <div class="row user-list">
-<<div class="col-md-4">
+<<div class="col-md-3">
 {{pendingUserList.name}} {{index}}
 </div>
 <<div class="col-md-4">
 {{pendingUserList.email}}
 </div>
 <<div class="col-md-3">
-{{pendingUserList.contactDetails}}
+{{pendingUserList.phone}}
 </div>
-<<div class="col-md-1">
+<<div class="col-md-2">
 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 </div>
 </div>
+{{/if}}
                 {{/each}}
           </div>
         </div>
@@ -104,21 +106,24 @@
         <div class="card-content">
           <div class="table-responsive">
 
-                {{#each model status="deactivated" as |deactivatedUserList|}}
+                {{#each model as |deactivatedUserList|}}
+                {{#unless deactivatedUserList.active}}
 <div class="row user-list">
-<<div class="col-md-4">
+<<div class="col-md-3">
 {{deactivatedUserList.name}} {{index}}
 </div>
 <<div class="col-md-4">
 {{deactivatedUserList.email}}
 </div>
 <<div class="col-md-3">
-{{deactivatedList.contactDetails}}
+{{deactivatedUserList.phone}}
 </div>
-<<div class="col-md-1">
+<<div class="col-md-2">
 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 </div>
 </div>
+{{/unless}}
+
                 {{/each}}
           </div>
         </div>
@@ -128,20 +133,22 @@
         <div class="table-responsive">
 
               {{#each model status="administrator" as |administratorUserList|}}
+              {{#if  administratorUserList.administrator}}
 <div class="row user-list">
-<<div class="col-md-4">
+<<div class="col-md-3">
 {{administratorUserList.name}} {{index}}
 </div>
 <<div class="col-md-4">
 {{administratorUserList.email}}
 </div>
 <<div class="col-md-3">
-{{administratorUserList.contactDetails}}
+{{administratorUserList.phone}}
 </div>
-<<div class="col-md-1">
+<<div class="col-md-2">
 <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 </div>
 </div>
+{{/if}}
               {{/each}}
         </div>
       </div>
