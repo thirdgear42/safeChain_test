@@ -13,9 +13,9 @@
                     </li>
                     <li>
 
-{{#link-to "index" class="waves-effect waves-dark"}}
+<a href="#" class="waves-effect waves-dark" data-toggle="modal" data-target="#myModal">
                           <i class="fa fa-fw fa-question-circle-o"></i> Support
-{{/link-to}}
+</a>
                     </li>
                     <li>
                         <a class="waves-effect waves-dark">
@@ -47,3 +47,23 @@
             </div>
 
         </nav>
+
+        <div id="myModal" class="modal supportModel fade" role="dialog">
+          <!-- <div class="modal-dialog"> -->
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">We love your feedback!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Some text in the modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          <!-- </div> -->
+        </div>
