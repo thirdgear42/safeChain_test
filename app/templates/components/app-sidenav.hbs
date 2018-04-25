@@ -6,7 +6,7 @@
 
                     <li>
 
-{{#link-to "orders" class="active-menu waves-effect waves-dark"}}
+{{#link-to "orders" class="waves-effect waves-dark" activeClass="active-menu"}}
                           <i class="fa fa-fw fa-file-o"></i> Orders
 {{/link-to}}
 
@@ -17,25 +17,26 @@
                           <i class="fa fa-fw fa-question-circle-o"></i> Support
 </a>
                     </li>
-                    <li>
+                    <li class="open">
                         <a class="waves-effect waves-dark" class="dropdown-toggle" data-toggle="dropdown">
-                          <i class="fa fa-fw fa-user-plus"></i> Administration <span class="fa arrow"></span>
+                          <i class="fa fa-fw fa-user-plus"></i> Administration <span class="sidenavSubmenu"><i class="fa fa-angle-down" aria-hidden="true"></i>
+</span>
                         </a>
                         <ul class="nav nav-second-level dropdown-menu" style="width: 100%;">
                             <li>
-                              {{#link-to "team_directory"}}
+                              {{#link-to "team_directory" activeClass="active-menu"}}
   <i class="fa fa-fw fa-users"></i> Team Directory
 {{/link-to}}
                             </li>
                             <li>
 
-{{#link-to "index"}}
+{{#link-to "index" activeClass="active-menu"}}
                                   <i class="fa fa-fw fa-files-o"></i> Escrow Accounts
 {{/link-to}}
 
                             </li>
                             <li>
-{{#link-to "index"}}
+{{#link-to "index" activeClass="active-menu"}}
                                   <i class="fa fa-fw fa-credit-card"></i> Subscription Plan
 {{/link-to}}
                             </li>

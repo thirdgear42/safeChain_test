@@ -332,6 +332,11 @@ background: #fff;
     font-size: 15px;
 }
 
+.sidenavSubmenu{
+  float: right;
+padding: 5px 11px;
+}
+
 .nav-third-level li a {
     padding-left: 55px;
 }
