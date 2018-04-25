@@ -1,0 +1,130 @@
+<div id="page-wrapper">
+
+<div class="background_overlay"></div>
+
+            <div id="page-inner">
+
+              <div class="row">
+              <div class="col-md-4 page_icon">
+                <i class="fa fa-fw fa-file-o"></i>
+                <span class="page_heading">Team Directory</span></div>
+              <div class="col-md-2"></div>
+
+              <div class="col-md-6 right_action_page_heading">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                <a class="page_heading_button btn">Invite Coworkers</a>
+                <!-- <i class="fa fa-align-center" aria-hidden="true"></i> -->
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+</div>
+              </div>
+
+              <div class="row">
+              <div class="col-md-12">
+                                <div class="card">
+<div class="row tile_heading">
+
+<div class="col-md-6 col-sm-12 col-xs-12 tile_action_right">
+<h3 class="tile_heading" style="float: left; text-align: left;">Safechain Test Agency <span class="tile_heading_sub">You are an administrator of this team</span></h3>
+</div>
+<div class="col-md-6 hidden-sm hidden-xs"></div>
+
+</div>
+
+
+
+
+<div class="tile_detail">
+
+
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#active" style="font-size: 16px;font-weight: 600;" aria-controls="home" role="tab" data-toggle="tab">Active (29)</a></li>
+      <li role="presentation"><a href="#pending" aria-controls="profile"  style="font-size: 16px;font-weight: 600;" role="tab" data-toggle="tab">Pending (17)</a></li>
+      <li role="presentation"><a href="#deactivated" aria-controls="messages" role="tab"  style="font-size: 16px;font-weight: 600;" data-toggle="tab">Deactivated (3)</a></li>
+      <li role="presentation"><a href="#administrator" aria-controls="settings" role="tab"  style="font-size: 16px;font-weight: 600;" data-toggle="tab">Administrators (14)</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="active">
+            {{active-userlist}}
+        </div>
+      <div role="tabpanel" class="tab-pane" id="pending">
+
+        <div class="card-content">
+          {{pending-userlist}}
+        </div>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="deactivated">
+
+        <div class="card-content">
+          <div class="table-responsive">
+
+                {{#each model status="deactivated" as |deactivatedUserList|}}
+<div class="row user-list">
+<<div class="col-md-4">
+{{deactivatedUserList.name}} {{index}}
+</div>
+<<div class="col-md-4">
+{{deactivatedUserList.email}}
+</div>
+<<div class="col-md-3">
+{{deactivatedList.contactDetails}}
+</div>
+<<div class="col-md-1">
+<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+</div>
+</div>
+                {{/each}}
+          </div>
+        </div>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="administrator"><div class="card-content">
+        <div class="table-responsive">
+
+              {{#each model status="administrator" as |administratorUserList|}}
+<div class="row user-list">
+<<div class="col-md-4">
+{{administratorUserList.name}} {{index}}
+</div>
+<<div class="col-md-4">
+{{administratorUserList.email}}
+</div>
+<<div class="col-md-3">
+{{administratorUserList.contactDetails}}
+</div>
+<<div class="col-md-1">
+<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+</div>
+</div>
+              {{/each}}
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+        </div>
+                </div>
+              </div>
+
+
+				{{app-footer}}
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>

@@ -1,0 +1,21 @@
+{{yield}}
+<div class="card-content">
+<div class="table-responsive">
+      {{#each model as |activeUserList|}}
+<div class="row user-list">
+<<div class="col-md-4">
+{{activeUserList.name}}
+</div>
+<<div class="col-md-4">
+{{activeUserList.email}}
+</div>
+<<div class="col-md-3">
+{{activeUserList.contactDetails}}
+</div>
+<<div class="col-md-1">
+<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+</div>
+</div>
+      {{/each}}
+</div>
+</div>

@@ -1,0 +1,99 @@
+<div id="page-wrapper">
+
+<div class="background_overlay"></div>
+
+            <div id="page-inner">
+
+              <div class="row">
+              <div class="col-md-4 page_icon"><i class="fa fa-fw fa-file-o"></i> <span class="page_heading">Orders <span class="page_heading_sub">Total Orders : 3</span></span></div>
+              <div class="col-md-2"></div>
+              <div class="col-md-6 right_action_page_heading">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                <a class="page_heading_button btn">New Order</a>
+                <i class="fa fa-align-center" aria-hidden="true"></i>
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <i class="fa fa-search" aria-hidden="true"></i>
+</div>
+              </div>
+
+              <div class="row">
+              <div class="col-md-12">
+                                <div class="card">
+<div class="row tile_heading">
+<div class="col-md-7 hidden-sm hidden-xs"></div>
+<div class="col-md-5 col-sm-12 col-xs-12 tile_action_right">
+  <div class="dropdown tile_control">
+  <button class="btn btn-default dropdown-toggle dropdown_sorting" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Sort By Closing Date
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu tile_control" aria-labelledby="dropdownMenu1">
+    <li><a href="#">Sort By Value</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Sort By Order Id</a></li>
+    <li><a href="#">Sort By Property Id</a></li>
+  </ul>
+</div>
+<i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+<span class="heading_pagination">1-3 of 3</span>
+<i class="fa fa-angle-left heading_page_icon" aria-hidden="true"></i>
+<i class="fa fa-angle-right heading_page_icon" aria-hidden="true"></i>
+
+</div>
+</div>
+
+{{#each model as |property|}}
+<div class="tile_detail">
+  <div class="card-action">
+    {{property.title}}
+    <span style="float:right;"><a class="order_closing_btn waves-effect waves-light btn" style="text-transform: capitalize;">
+      <i class="fa fa-calendar-o" aria-hidden="true"></i> {{property.closing}}</a>
+      <i class="fa fa-ellipsis-h" style="padding: 5px 10px;" aria-hidden="true"></i></span>
+  </div>
+
+  <div class="card-content">
+
+    <div class="col-md-6 np-margin">
+<div class="row np-margin">
+<div class="col-md-4">
+  <p>Order Id :</p>
+</div>
+<div class="col-md-8">
+  <p class="propertyDetails">{{property.orderId}}</p>
+</div>
+</div>
+
+<div class="row np-margin">
+<div class="col-md-4">
+  <p>Type :</p>
+</div>
+<div class="col-md-8">
+  <p class="propertyDetails">{{property.type}}</p>
+</div>
+</div>
+
+<div class="row np-margin">
+<div class="col-md-4">
+  <p>Property Id :</p>
+</div>
+<div class="col-md-8">
+  <p class="propertyDetails">{{property.propertyId}}</p>
+</div>
+</div>
+
+  </div>
+    <div class="col-md-6"><i class="fa fa-user-circle" style="font-size: 42px;" aria-hidden="true"></i></div>
+
+    <div class="clearBoth"></div>
+  </div>
+
+</div>
+{{/each}}
+        </div>
+                </div>
+              </div>
+
+				{{app-footer}}
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>

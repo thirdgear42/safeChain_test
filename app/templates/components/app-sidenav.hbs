@@ -1,0 +1,49 @@
+{{yield}}
+
+<nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+
+{{#link-to "orders" class="active-menu waves-effect waves-dark"}}
+                          <i class="fa fa-fw fa-file-o"></i> Orders
+{{/link-to}}
+
+                    </li>
+                    <li>
+
+{{#link-to "index" class="waves-effect waves-dark"}}
+                          <i class="fa fa-fw fa-question-circle-o"></i> Support
+{{/link-to}}
+                    </li>
+                    <li>
+                        <a class="waves-effect waves-dark">
+                          <i class="fa fa-fw fa-user-plus"></i> Administration <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                              {{#link-to "team_directory"}}
+  <i class="fa fa-fw fa-users"></i> Team Directory
+{{/link-to}}
+                            </li>
+                            <li>
+
+{{#link-to "index"}}
+                                  <i class="fa fa-fw fa-files-o"></i> Escrow Accounts
+{{/link-to}}
+
+                            </li>
+                            <li>
+{{#link-to "index"}}
+                                  <i class="fa fa-fw fa-credit-card"></i> Subscription Plan
+{{/link-to}}
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
