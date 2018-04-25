@@ -131,6 +131,9 @@ border-radius:0px;
 }
 .closed i{color: #adadad;}
 
+.supportform{
+  height: 100%;
+}
 
 .nav > li > a{
   color: #6d6b6b;

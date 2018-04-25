@@ -52,7 +52,7 @@
           <!-- <div class="modal-dialog"> -->
 
             <!-- Modal content-->
-<form>
+<form class="supportform">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title supportTitle">We love your feedback!</h4>
@@ -63,7 +63,7 @@
 <div class="col-md-12 modelinputRow">
 
 <label>Topic</label>
-    <select class="form-control supportDropdown">
+    <select class="form-control supportDropdown" required>
       <option value="" disabled selected>Choose your option</option>
       <option value="1">I have some feedback.</option>
       <option value="2">I want to connect.</option>
@@ -71,7 +71,7 @@
     </select>
   </div>
 <div class="col-md-12">
-<textarea class="form-control supportDropdown" value="description" action="disableButton" on="change" placeholder="Kindly give us some Description"></textarea>
+<textarea class="form-control supportDropdown" value="description" required action="disableButton" on="change" placeholder="Kindly give us some Description"></textarea>
 </div>
 
 </div>
