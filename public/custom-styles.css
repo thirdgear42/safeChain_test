@@ -8,9 +8,10 @@ body {
 }
 
 #page-wrapper {
-    padding: 15px 15px;
+    padding: 0px;
     min-height: 600px;
     background: #ececec;
+
 }
 #page-inner {
     width:100%;
@@ -664,15 +665,18 @@ line-height: 1.428571429;
 	#sideNav{
 	display:none;
 }
+
  #page-wrapper {
 position: relative;
-top: 59px;
+top: 0px !important;
+margin-left: 0px !important;
  }
  }
  @media(max-width:480px) {
  #page-wrapper {
 position: relative;
 top: 93px;
+margin-left: 0px !important;
  }
 .page-header small {
 display: block;
@@ -803,6 +807,9 @@ padding: 0 15px 0px 15px;
 		}
  }
    @media(max-width:320px) {
+     #page-wrapper {
+    margin-left: 0px !important;
+     }
 	  ul#dropdown1 {
 			left: 0px !important;
 		}
