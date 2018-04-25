@@ -50,12 +50,52 @@
     <!-- Tab panes -->
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="active">
-            {{active-userlist}}
+
+        <div class="card-content">
+            <div class="table-responsive">
+
+                  {{#each model status="active" as |activeUserList|}}
+<div class="row user-list">
+<<div class="col-md-4">
+  {{activeUserList.name}} {{index}}
+</div>
+<<div class="col-md-4">
+  {{activeUserList.email}}
+</div>
+<<div class="col-md-3">
+  {{activeUserList.contactDetails}}
+</div>
+<<div class="col-md-1">
+  <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+</div>
+</div>
+                  {{/each}}
+            </div>
+        </div>
+
         </div>
       <div role="tabpanel" class="tab-pane" id="pending">
 
         <div class="card-content">
-          {{pending-userlist}}
+          <div class="table-responsive">
+
+                {{#each model status="pending" as |pendingUserList|}}
+<div class="row user-list">
+<<div class="col-md-4">
+{{pendingUserList.name}} {{index}}
+</div>
+<<div class="col-md-4">
+{{pendingUserList.email}}
+</div>
+<<div class="col-md-3">
+{{pendingUserList.contactDetails}}
+</div>
+<<div class="col-md-1">
+<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+</div>
+</div>
+                {{/each}}
+          </div>
         </div>
 
       </div>
