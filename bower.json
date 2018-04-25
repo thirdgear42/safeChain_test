@@ -1,0 +1,6 @@
+{
+  "name": "safekey-test",
+  "dependencies": {
+    "materialize": "0.97.6"
+  }
+}

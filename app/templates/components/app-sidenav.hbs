@@ -52,18 +52,38 @@
           <!-- <div class="modal-dialog"> -->
 
             <!-- Modal content-->
-            <div class="modal-content">
+<form>
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">We love your feedback!</h4>
+                <h4 class="modal-title supportTitle">We love your feedback!</h4>
               </div>
               <div class="modal-body">
-                <p>Some text in the modal.</p>
+
+<div class="row">
+<div class="col-md-12 modelinputRow">
+
+<label>Topic</label>
+    <select class="form-control supportDropdown">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1">I have some feedback.</option>
+      <option value="2">I want to connect.</option>
+      <option value="3">Looking for job opportunity.</option>
+    </select>
+  </div>
+<div class="col-md-12">
+<textarea class="form-control supportDropdown" value="description" action="disableButton" on="change" placeholder="Kindly give us some Description"></textarea>
+</div>
+
+</div>
+
+
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
+              <div class="modalFooter">
+                  <p class="modelText">Your satisfaction is very important to us. If your issue requires immediate attention please contact us on(000) 000 0000.</p>
+                  <button type="submit" class="btn btn-default feedbackSendButton">Send</button>
+
+                </div>
+  </form>
 
           <!-- </div> -->
         </div>
